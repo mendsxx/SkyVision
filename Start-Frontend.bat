@@ -1,0 +1,1 @@
+cd C:\Users\lucas\OneDrive\Documentos\Projetos\skyvision && serve -s build
