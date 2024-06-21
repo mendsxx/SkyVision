@@ -495,7 +495,8 @@ app.get('/stock', (req, res) => {
   const query = `
     SELECT stock.*, products.name 
     FROM stock 
-    JOIN products ON stock.product_id = products.id 
+    JOIN products ON stock.product_id = products.id
+    WHERE stock.quantity > 0
     LIMIT ?, ?`;
   db.query(query, [parseInt(offset), parseInt(limit)], (err, results) => {
     if (err) {
